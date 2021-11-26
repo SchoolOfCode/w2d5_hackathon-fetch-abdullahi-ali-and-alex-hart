@@ -1,7 +1,7 @@
-/* 
+
 * {
     outline: 1px solid red;
-  } */
+  }
 
 body {
     background-image: url(backgroundImage.jpg);
@@ -27,6 +27,15 @@ h1, form, button {
 
 }
 
+#name {
+    font-family: 'Outfit', sans-serif;
+    display: block;
+    max-height: auto;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #logo {
         display: block;
         max-width: 30vw; 
@@ -43,6 +52,12 @@ h1, form, button {
     margin-left: auto;
     margin-right: auto;
        
+}
+
+#statsList {
+    font-family: 'Outfit', sans-serif;
+    padding-right: 25%;
+    padding-left: 25%;
 }
 
 #pokedex {
