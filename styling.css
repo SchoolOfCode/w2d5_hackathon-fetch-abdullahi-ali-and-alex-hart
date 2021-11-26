@@ -1,0 +1,55 @@
+
+* {
+    outline: 1px solid red;
+  }
+
+body {
+    background-image: url(backgroundImage.jpg);
+    background-position: center 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+}
+
+body, html {
+    height: 100%;
+    margin: 0px;
+}
+
+h1, form, button {
+    font-family: 'Outfit', sans-serif;
+    display: block;
+    max-height: auto;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+#logo {
+        display: block;
+        max-width: 30vw; 
+        max-height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+}
+
+#enterPokemon {
+    display: block;
+    max-width: 30vw; 
+    max-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+       
+}
+
+#pokedex {
+    display: block;
+    max-width: 30vw; 
+    max-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
