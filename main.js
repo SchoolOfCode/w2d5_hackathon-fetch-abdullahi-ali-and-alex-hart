@@ -26,6 +26,7 @@ async function fetchKantoPokemon(){
  let total = document.getElementById("");
  let chosenPokemon = document.querySelector("input").innerText
  
+ 
  async function fetchPokemonStats(){
 
  
