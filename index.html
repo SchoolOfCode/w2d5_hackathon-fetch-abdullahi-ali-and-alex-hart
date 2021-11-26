@@ -14,9 +14,14 @@
 <body>
     <header> <img id= "logo" src="headerLogo.png"></header>
 <section id="enterPokemon"> 
-<h1>Type in a pokemon!</h1>
-<form action="https://pokeapi.co/api/v2/pokemon/">
-        <input type="text">
+<h1>Type in a pokémon!</h1>
+<form>
+        <input list="pokemon">
+        <select id="dataList">
+            <option value="placeholder">
+        </option>
+    </select>
+        </datalist>
         <br>
         <br>
         <button>Submit</button>
@@ -24,6 +29,8 @@
 <br>
 </section>
 <section id="pokeDex">
+   <figure id="apiImage">
+   </figure> 
     <img id=pokedex src=pokedexTransparent.png>
 </section>
 <br>
