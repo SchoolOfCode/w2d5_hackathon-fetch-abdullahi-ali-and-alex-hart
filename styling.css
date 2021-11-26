@@ -1,7 +1,7 @@
-
+/* 
 * {
     outline: 1px solid red;
-  }
+  } */
 
 body {
     background-image: url(backgroundImage.jpg);
@@ -52,4 +52,16 @@ h1, form, button {
     margin-left: auto;
     margin-right: auto;
     width: 40%;
+}
+
+#apiImage {
+    background-image: url(testPNG.png);
+    background-position: center;
+    background-size: contain;
+    width: 8vw;
+    height: 8vh;
+    position: absolute;
+    left: 36.25vw;
+    top: 28vh;
+    z-index: -1;
 }
