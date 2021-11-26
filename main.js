@@ -10,7 +10,7 @@ async function fetchKantoPokemon(){
      let name = pokemon.name;
      let newPokemonToOptions = document.createElement("option")
      newPokemonToOptions.value = name;
-     newPokemonToOptions.innerText = name;
+     
      
      //thedropdownvariable.innerchild = newPokemonToOptions
  }
@@ -24,9 +24,9 @@ async function fetchKantoPokemon(){
  let specialAttack = document.getElementById("");
  let specialDefense = document.getElementById("");
  let total = document.getElementById("");
+ let chosenPokemon = document.querySelector("input").innerText
  
  async function fetchPokemonStats(){
-     let chosenPokemon = document.querySelector()
 
  
      let thePromis = await fetch(`https://pokeapi.co/api/v2/pokemon/`)

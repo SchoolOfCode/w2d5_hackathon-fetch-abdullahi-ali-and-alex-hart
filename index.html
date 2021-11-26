@@ -13,21 +13,21 @@
 </head>
 <body>
     <header> <img id= "logo" src="headerLogo.png"></header>
-<section id="enterPokemon"> 
-<h1>Type in a pokémon!</h1>
-<form>
-        <input list="pokemon">
-        <select id="dataList">
-            <option value="placeholder">
-        </option>
-    </select>
-        </datalist>
-        <br>
-        <br>
-        <button>Submit</button>
-</form>
-<br>
-</section>
+    <section id="enterPokemon"> 
+        <form>
+            <label>Type in a pokémon!<input list="pokemon"></label>
+            
+            <select id="dataList">
+                <datalist >
+                    <option value="placeholder">
+                </datalist>
+        </select>
+            <br>
+            <br>
+            <button>Submit</button>
+    </form>
+    <br>
+    </section>
 <section id="pokeDex">
    <figure id="apiImage">
    </figure> 
@@ -35,17 +35,19 @@
 </section>
 <br>
 <section id="name">
-    <h2>Pokemon name</h2>
+    <h2>Name:</h2>
 </section>
-<section id="stats">
-HP:
-Attack:
-Defense:
-Speed:
-Special Attack:
-Special Defense:
-Total:
+<section id="statsList">
+<ul>
+    <li id="hp">HP:</li>
+    <li id="attack">Attack:</li>
+    <li id="defense">Defense:</li>
+    <li id="speed">Speed:</li>
+    <li id="specialAttack">Special Attack:</li>
+    <li id="specialDefense">Special Defense:</li>
+    <li id="total">Total:</li>
+</ul>
 </section>
- 
+    
 </body>
 </html>
