@@ -3,7 +3,6 @@ async function fetchKantoPokemon(){
     let response = await thePromis.json();
     let allpokemon = response.results
     console.log(allpokemon)
-    
     allpokemon.forEach(addToDropDown)
 
 }  
@@ -14,7 +13,7 @@ let dataList = document.querySelector("datalist")
      let newPokemonToOptions = document.createElement("option")
      //console.log(newPokemonToOptions)
      newPokemonToOptions.value = name;
-     dataList.innerchild = newPokemonToOptions
+     dataList.appendChild(newPokemonToOptions);
      //console.log(dataList)
 
  }
@@ -42,5 +41,12 @@ let dataList = document.querySelector("datalist")
      console.log(theResponse)
      let theStats = theResponse.stats;
      console.log(theStats);
+     hp.innerText = `HP: ${theStats[0].base_stat}`
+     attack.innerText = `ATTACK: ${theStats[1].base_stat}`
+     defense.innerText = `Defense: ${theStats[2].base_stat}`
+     speed.innerText = `Speed: ${theStats[3].base_stat}`
+     specialAttack.innerText = `SpecialAttack: ${theStats[4].base_stat}`
+     specialDefense.innerText = `specialDefense: ${theStats[5].base_stat}`
+     total.innerText = `HP: ${theStats[0].base_stat+theStats[1].base_stat+theStats[2].base_stat+theStats[3].base_stat+theStats[4].base_stat+theStats[5].base_stat}`
  }
  
