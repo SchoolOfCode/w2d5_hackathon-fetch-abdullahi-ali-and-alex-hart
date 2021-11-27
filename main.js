@@ -27,26 +27,51 @@ let dataList = document.querySelector("datalist")
  let specialAttack = document.getElementById("specialAttack");
  let specialDefense = document.getElementById("specialDefense");
  let total = document.getElementById("total");
- 
+ let pokeName = document.getElementById("pokeName");
+ let input = document.querySelector("input")
  let submit = document.querySelector("button");
+ let apiImage = document.getElementById("apiImage");
  
  submit.addEventListener("click", fetchPokemonStats)
  
  async function fetchPokemonStats(){
-     let chosenPokemon = document.querySelector("input").value
-
-     console.log(chosenPokemon)
+     let chosenPokemon = input.value;
      let thePromis = await fetch(`https://pokeapi.co/api/v2/pokemon/${chosenPokemon}`)
      let theResponse = await thePromis.json();
-     console.log(theResponse)
      let theStats = theResponse.stats;
-     console.log(theStats);
-     hp.innerText = `HP: ${theStats[0].base_stat}`
-     attack.innerText = `ATTACK: ${theStats[1].base_stat}`
-     defense.innerText = `Defense: ${theStats[2].base_stat}`
-     speed.innerText = `Speed: ${theStats[3].base_stat}`
-     specialAttack.innerText = `SpecialAttack: ${theStats[4].base_stat}`
-     specialDefense.innerText = `specialDefense: ${theStats[5].base_stat}`
-     total.innerText = `HP: ${theStats[0].base_stat+theStats[1].base_stat+theStats[2].base_stat+theStats[3].base_stat+theStats[4].base_stat+theStats[5].base_stat}`
- }
- 
+     let pokeImage = theResponse.sprites.front_shiny
+     
+     pokeName.innerText = chosenPokemon; 
+     creatRemoveImage(pokeImage);
+     addStats(theStats);
+     input.value = "";
+     
+    }
+    
+ function creatRemoveImage(imageLink){
+        let newImage = document.createElement("img");
+        newImage.src = imageLink;
+        newImage.id = "pokeSprite";
+        let currentImage = document.querySelectorAll("figure > img");
+        console.log(currentImage)
+        if (currentImage.length > 0){
+            console.log(apiImage)
+            let toBeRemoved = document.getElementById("pokeSprite")
+            apiImage.removeChild(toBeRemoved);
+            apiImage.appendChild(newImage);
+            
+        } else{
+            apiImage.appendChild(newImage);
+        }
+    }
+    
+ function addStats(theStats){
+        hp.innerText = `HP: ${theStats[0].base_stat}`
+        attack.innerText = `ATTACK: ${theStats[1].base_stat}`
+        defense.innerText = `Defense: ${theStats[2].base_stat}`
+        speed.innerText = `Speed: ${theStats[3].base_stat}`
+        specialAttack.innerText = `SpecialAttack: ${theStats[4].base_stat}`
+        specialDefense.innerText = `specialDefense: ${theStats[5].base_stat}`
+        total.innerText = `HP: ${theStats[0].base_stat+theStats[1].base_stat+theStats[2].base_stat+theStats[3].base_stat+theStats[4].base_stat+theStats[5].base_stat}`
+        
+}
