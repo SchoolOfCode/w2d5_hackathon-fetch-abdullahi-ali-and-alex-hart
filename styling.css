@@ -1,7 +1,11 @@
 
 * {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
   }
+
+ul{
+    list-style-type: none;
+}
 
 body {
     background-image: url(backgroundImage.jpg);
@@ -76,7 +80,7 @@ h1, form, button {
     width: 12vw;
     height: 12vh;
     position: absolute;
-    left: 30.5vw;
+    left: 30.25vw;
     top: 34vh;
     z-index: 2;
 }
