@@ -1,86 +1,171 @@
-
 * {
-    /* outline: 1px solid red; */
-  }
+  /* outline: 1px solid red; */
+}
 
-ul{
-    list-style-type: none;
+ul {
+  list-style-type: none;
 }
 
 body {
-    background-image: url(backgroundImage.jpg);
-    background-position: center 0;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
+  background-image: url(backgroundImage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-body, html {
-    height: 100%;
-    margin: 0px;
+body,
+html {
+  height: 100%;
+  margin: 0px;
 }
 
-h1, form, button {
-    font-family: 'Outfit', sans-serif;
-    display: block;
-    max-height: auto;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-
-
+h1,
+form,
+button {
+  font-family: "Outfit", sans-serif;
+  display: block;
+  max-height: auto;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
-
+main {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0;
+}
 #name {
-    font-family: 'Outfit', sans-serif;
-    display: block;
-    max-height: auto;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+  font-family: "Outfit", sans-serif;
+  display: block;
+  max-height: auto;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  height: 25vh;
 }
 
 #logo {
-        display: block;
-        max-width: 30vw; 
-        max-height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 40%;
 }
 
 #enterPokemon {
-    display: block;
-    max-width: 30vw; 
-    max-height: auto;
-    margin-left: auto;
-    margin-right: auto;
-       
+  display: flex;
+  width: 35vw;
+  /* padding-left: 30%;
+  padding-right: 30%; */
+  margin: auto;
+}
+#enterPokemon > input {
+  width: 62.5%;
+}
+#enterPokemon > button {
+  width: 37.5%;
+  margin: 0;
 }
 
-#statsList {
-    font-family: 'Outfit', sans-serif;
-    padding-right: 25%;
-    padding-left: 25%;
+#statsArea {
+  display: none;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  padding-right: 1%;
+  padding-left: 10%;
+}
+.statsArea {
+  display: none;
+  padding-top: 7.5%;
+}
+
+#pokeDexContainer {
+  margin-top: 10px;
+  display: flex;
+  width: 60vw;
+  max-width: 450px;
+  height: 60vh;
+  position: relative;
+  left: 11vw;
 }
 
 #pokedex {
-    display: block;
-    max-width: 30vw; 
-    max-height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 #apiImage {
-    background-position: center;
-    background-size: contain;
-    width: 12vw;
-    height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: 0;
+  width: 30%;
+  height: 30%;
+  top: 29%;
+  left: 11%;
+  z-index: 5;
+}
+#apiImage > img {
+  height: 100%;
+  width: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  #enterPokemon {
+    display: flex;
+    width: 80vw;
+    margin: auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #pokeDexContainer {
+    display: flex;
+    position: relative;
+
+    width: 80vw;
+    height: 40vh;
+  }
+
+  #pokedex {
+    width: 100%;
+    height: 100%;
+  }
+  #apiImage {
     position: absolute;
-    left: 30.25vw;
-    top: 34vh;
-    z-index: 2;
+  }
+  #apiImage > img {
+    width: 98%;
+    height: 98%;
+  }
+  #statsArea {
+    display: none;
+    width: 70vw;
+    display: flex;
+    padding: 0%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+  }
+  header {
+    margin: auto;
+    height: 25vh;
+    width: 100vw;
+  }
+  #logo {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+  }
 }

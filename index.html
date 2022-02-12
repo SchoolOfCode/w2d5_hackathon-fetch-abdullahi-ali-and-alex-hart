@@ -1,53 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullahi & Alex's PokeDex</title> 
-    <link rel="stylesheet" href="styling.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdullahi & Alex's PokeDex</title>
+    <link rel="stylesheet" href="styling.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap');
-        </style>
-    
-</head>
-<body>
-    <header> <img id= "logo" src="headerLogo.png"></header>
-<section id="enterPokemon"> 
- 
-     <label>Select a Pokémon!</label>
-    <input list="pokemon"> 
-        <datalist id="pokemon">
-            
-        </datalist>
-
-        
-        <br>
-        <br>
-        <button>Submit</button>
-
-<br>
-</section>
-<section id="pokeDexContainer">
-   <figure id="apiImage">
-   </figure> 
-    <img id=pokedex src=pokedexTransparent.png>
-</section>
-<br>
-<section id="name">
-    <h2 id="pokeName">Name:</h2>
-</section>
-<section id="statsList">
-<ul>
-    <li id="hp">HP:</li>
-    <li id="attack">Attack:</li>
-    <li id="defense">Defense:</li>
-    <li id="speed">Speed:</li>
-    <li id="specialAttack">Special Attack:</li>
-    <li id="specialDefense">Special Defense:</li>
-    <li id="total">Total:</li>
-</ul>
-</section>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap");
+    </style>
+  </head>
+  <body>
+    <header><img id="logo" src="headerLogo.png" /></header>
+    <section id="enterPokemon">
+      <input list="pokemon" placeholder="Select a Pokémon!" />
+      <datalist id="pokemon"> </datalist>
+      <button>Submit</button>   
+    </section>
+    <main>
+      <section id="pokeDexContainer">
+        <img id="pokedex" src="pokedexTransparent.png" />
+        <figure id="apiImage"></figure>
+      </section>
+      <br />
+      <section style="display: none" class="statsArea" id="statsArea">
+        <h2 id="pokeName"></h2>
+        <ul>
+          <li id="hp"></li>
+          <li id="attack"></li>
+          <li id="defense"></li>
+          <li id="speed"></li>
+          <li id="specialAttack"></li>
+          <li id="specialDefense"></li>
+          <li id="total"></li>
+        </ul>
+      </section>
+    </main>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
